@@ -1,0 +1,15 @@
+.DateInput_input {
+    font-weight: 200;
+    font-size: 17px;
+    line-height: 22px;
+    color: #484848;
+    background-color: #fff;
+    width: 100%;
+    padding: 7px 11px 9px;
+    /* border: 0; */
+    /* border-top: 0; */
+    /* border-right: 0; */
+    /* border-bottom: 2px solid transparent; */
+    border-left: 0;
+    border-radius: 50.5rem;
+}
