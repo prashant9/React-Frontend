@@ -13,13 +13,11 @@ function Header({loggedin}) {
   const [isExpanded, setIsExpanded] = useState(true);
   const navigate = useNavigate();
   const { logout,user } = useAuth();
-console.log("****************")
-  console.log(user)
-  console.log("****************")
+
   const handleLogOut = (e)=>{
 e.preventDefault();
-logout(); // Call login function
-        navigate('/login'); // Redirect to dashboard
+logout(); 
+        navigate('/login');
   }
 
   return (
@@ -51,13 +49,13 @@ logout(); // Call login function
         
     </header>
     <div className="flex min-h-screen bg-gray-100">
-      {/* Sidebar */}
+    
       <aside
         className={`bg-blue-950 text-white transition-width duration-300 ease-in-out ${
           isExpanded ? "w-64" : "w-20"
         } flex flex-col p-4 space-y-6 shadow-lg`}
       >
-        {/* Toggle Button */}
+      
         <button
           onClick={() => setIsExpanded(!isExpanded)}
           className="text-white bg-blue-700 p-2 rounded-md mb-4"
@@ -90,7 +88,7 @@ logout(); // Call login function
             <FaTachometerAlt className="text-xl" />
             {isExpanded && <span>Products</span>}
           </Link>
-          {user.type == 'admin' &&
+          {user && user.type == 'admin' &&
             <Link to="/users"
               className="flex items-center space-x-2 p-2 rounded hover:bg-blue-700"
             >
